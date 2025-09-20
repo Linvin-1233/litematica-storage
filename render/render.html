@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>渲染图</title>
+</head>
+<style>
+    body {
+        background-color: #222;
+    }
+</style>
+<body>
+<canvas id="canvas"></canvas>
+
+<script type="module">
+    import { SchematicRenderer } from 'schematic-renderer';
+
+    const canvas = document.getElementById('canvas');
+    const renderer = new SchematicRenderer(canvas, {}, {}, {
+        enableDragAndDrop: true
+    });
+
+    // The renderer is now ready to use!
+    // You can drag and drop schematic files onto the canvas
+</script>
+</body>
+</html>

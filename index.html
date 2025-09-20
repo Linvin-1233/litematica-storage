@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no">
+  <title>Linvin的投影仓库</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="icon.png">
+</head>
+<body>
+<div class="header-bg"></div>
+<h1 class="title">Linvin的投影仓库</h1>
+<header class="header">
+    <a href="https://github.com/Linvin-1233/litematica-storage" target="_blank" id="github-c">本站Github</a>
+</header>
+
+<div id="controls">
+  <input type="text" id="search-input" placeholder="搜索文件...">
+  <div id="tag-list"></div>
+</div>
+
+<div id="file-list"></div>
+<label class="switch">
+    <input type="checkbox" class="ghfast-toggle">
+</label>
+<div style="height: 200px;"></div>
+
+<script src="scripts/main.js" type="module"></script>
+<script src="scripts/lazyload.js" type="module"></script>
+<script type="module">
+    import { initLazyLoad } from './scripts/lazyload.js';
+    initLazyLoad({ container: document.getElementById('file-list') });
+</script>
+</body>
+</html>
