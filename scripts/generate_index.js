@@ -63,9 +63,11 @@ const indexData = allFiles.map(f => {
     let preview = defaultPreview;
     let schematio = null;
 
-    if (ext === ".litematic") {
+    if (ext === ".litematic" || ext === ".zip") {
         preview = findPreview(name);
-        schematio = schematioUrl(f);
+        if (ext === ".litematic") {
+            schematio = schematioUrl(f);
+        }
     }
 
     const repo = "litematica-storage";
@@ -75,7 +77,7 @@ const indexData = allFiles.map(f => {
     return {
         name: path.basename(f),
         path: f,
-        rawUrl, // GitHub 原始地址
+        rawUrl,                      // GitHub 原始地址
         preview,
         schematio
     };
